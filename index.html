@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Centro de Cuidado de Mascotas</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetCare</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Cuidamos a tus mascotas con amor</h1>
+            <p>Centro especializado en el cuidado integral de perros y gatos. Más de 10 años de experiencia brindando el mejor servicio.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('servicios')">Nuestros Servicios</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contacto')">Contactar</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="pet-card">
+                <i class="fas fa-dog"></i>
+                <h3>Perros</h3>
+                <p>Cuidado especializado</p>
+            </div>
+            <div class="pet-card">
+                <i class="fas fa-cat"></i>
+                <h3>Gatos</h3>
+                <p>Atención personalizada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Peluquería</h3>
+                    <p>Corte, baño y peinado profesional para que tu mascota luzca espectacular.</p>
+                    <div class="service-price">Desde $25.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Consulta Veterinaria</h3>
+                    <p>Exámenes médicos completos con veterinarios certificados.</p>
+                    <div class="service-price">Desde $35.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Guardería</h3>
+                    <p>Cuidado diario mientras trabajas, con juegos y actividades.</p>
+                    <div class="service-price">Desde $20.000/día</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Entrenamiento</h3>
+                    <p>Adiestramiento básico y avanzado con métodos positivos.</p>
+                    <div class="service-price">Desde $40.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Vacunación</h3>
+                    <p>Plan completo de vacunación para proteger a tu mascota.</p>
+                    <div class="service-price">Desde $15.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cuidados Especiales</h3>
+                    <p>Atención médica para mascotas con necesidades especiales.</p>
+                    <div class="service-price">Consultar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dra. María González</h3>
+                    <p class="member-role">Veterinaria Principal</p>
+                    <p>15 años de experiencia en medicina veterinaria. Especialista en cirugía y medicina interna.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Carlos Rodríguez</h3>
+                    <p class="member-role">Peluquero Canino</p>
+                    <p>Experto en estética canina con certificación internacional. Más de 10 años de experiencia.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Ana López</h3>
+                    <p class="member-role">Entrenadora</p>
+                    <p>Especialista en comportamiento animal y técnicas de adiestramiento positivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('modal1')">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-dog"></i>
+                        <p>Peluquería</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('modal2')">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-cat"></i>
+                        <p>Consulta</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('modal3')">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Guardería</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('modal4')">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Entrenamiento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Calle 45 #23-67, Barranquilla, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+57 300 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@petcare.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 8:00 AM - 6:00 PM<br>Sáb: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="peluqueria">Peluquería</option>
+                                <option value="veterinaria">Consulta Veterinaria</option>
+                                <option value="guarderia">Guardería</option>
+                                <option value="entrenamiento">Entrenamiento</option>
+                                <option value="vacunacion">Vacunación</option>
+                                <option value="especiales">Cuidados Especiales</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-paw"></i>
+                        <span>PetCare</span>
+                    </div>
+                    <p>Cuidamos a tus mascotas con amor y profesionalismo. Tu tranquilidad es nuestra prioridad.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Peluquería</a></li>
+                        <li><a href="#servicios">Consulta Veterinaria</a></li>
+                        <li><a href="#servicios">Guardería</a></li>
+                        <li><a href="#servicios">Entrenamiento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle 45 #23-67, Barranquilla</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@petcare.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PetCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Servicio de Peluquería</h3>
+            <p>Nuestro servicio de peluquería incluye baño, corte, peinado y cuidado de uñas para que tu mascota luzca espectacular.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Consulta Veterinaria</h3>
+            <p>Realizamos exámenes médicos completos con veterinarios certificados para garantizar la salud de tu mascota.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Servicio de Guardería</h3>
+            <p>Cuidamos a tu mascota mientras trabajas, con juegos, actividades y mucho amor en un ambiente seguro.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h3>Entrenamiento</h3>
+            <p>Adiestramiento básico y avanzado con métodos positivos para mejorar el comportamiento de tu mascota.</p>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <span>¡Mensaje enviado correctamente!</span>
+    </div>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
