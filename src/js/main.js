@@ -455,5 +455,32 @@ function init() {
   });
 }
 
+function showLoginModal() {
+    closeModal('registerModal'); // Por si el otro está abierto
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function showRegisterModal() {
+    closeModal('loginModal'); // Por si el otro está abierto
+    const modal = document.getElementById('registerModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function switchToRegister() {
+    showRegisterModal();
+}
+
+function switchToLogin() {
+    showLoginModal();
+}
+
+
 // Ejecutar inicialización
 document.addEventListener('DOMContentLoaded', init);
