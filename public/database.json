@@ -1,7 +1,50 @@
 {
     "roles": [
+        {
+            "id": 1,
+            "name": "cliente"
+        },
+        {
+            "id": 2,
+            "name": "trabajador"
+        }
     ],
     "users": [
+        {
+            "id": 1,
+            "name": "Carlos Gómez",
+            "email": "carlos@email.com",
+            "password": "1234",
+            "phone": "3001112233",
+            "userType": "cliente",
+            "createdAt": "2025-07-09"
+        },
+        {
+            "id": 2,
+            "name": "Laura Ruiz",
+            "email": "laura@email.com",
+            "password": "admin123",
+            "phone": "3004445566",
+            "userType": "trabajador",
+            "createdAt": "2025-07-08"
+        }
     ],
-    "pets": []
+    "pets": [
+        {
+            "id": 1,
+            "ownerId": 1,
+            "name": "Firulais",
+            "species": "Perro",
+            "breed": "Labrador",
+            "age": 3
+        },
+        {
+            "id": 2,
+            "ownerId": 1,
+            "name": "Michi",
+            "species": "Gato",
+            "breed": "Angora",
+            "age": 2
+        }
+    ]
 }

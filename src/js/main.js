@@ -484,3 +484,61 @@ function switchToLogin() {
 
 // Ejecutar inicialización
 document.addEventListener('DOMContentLoaded', init);
+
+// --- AQUI PEGA el código completo de login y roles ---
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('loginForm');
+  const loginSection = document.getElementById('loginSection');
+  const dashboard = document.getElementById('dashboard');
+  const userInfo = document.getElementById('userInfo');
+  const petsList = document.getElementById('petsList');
+  const allUsers = document.getElementById('allUsers');
+  const allPets = document.getElementById('allPets');
+
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+    try {
+      const res = await fetch(`http://localhost:3000/users?email=${email}&password=${password}`);
+      const users = await res.json();
+
+      if (users.length === 0) {
+        alert('Credenciales incorrectas');
+        return;
+      }
+
+      const user = users[0];
+
+      loginSection.style.display = 'none';
+      dashboard.style.display = 'block';
+      userInfo.textContent = `Bienvenido, ${user.nombre} (${user.rol})`;
+
+      if (user.rol === 'cliente') {
+        const resPets = await fetch(`http://localhost:3000/pets?duenoId=${user.id}`);
+        const pets = await resPets.json();
+        petsList.innerHTML = '';
+        pets.forEach(p => {
+          const li = document.createElement('li');
+          li.textContent = p.nombre;
+          petsList.appendChild(li);
+        });
+      }
+
+      if (user.rol === 'trabajador') {
+        const [resUsers, resPets] = await Promise.all([
+          fetch('http://localhost:3000/users'),
+          fetch('http://localhost:3000/pets')
+        ]);
+        const users = await resUsers.json();
+        const pets = await resPets.json();
+
+        allUsers.innerHTML = `<h3>Usuarios</h3><ul>${users.map(u => `<li>${u.nombre} (${u.email})</li>`).join('')}</ul>`;
+        allPets.innerHTML = `<h3>Todas las mascotas</h3><ul>${pets.map(p => `<li>${p.nombre} (Dueño ID: ${p.duenoId})</li>`).join('')}</ul>`;
+      }
+    } catch (err) {
+      console.error('Error al iniciar sesión', err);
+    }
+  });
+});
